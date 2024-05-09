@@ -1,5 +1,5 @@
-import * as postRepository from '../repositories/memory.repository';
-import Post from '../models/post.model';
+import * as postRepository from '../repositories/memory.repository.js';
+import Post from '../models/post.model.js';
 
 export const getAllPosts = (): Post[] => {
   return postRepository.getPosts();

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as PostService from '../services/post.service';
+import * as PostService from '../services/post.service.js';
 
 export const getAllPosts = async (_req: Request, res: Response): Promise<void> => {
   const posts = PostService.getAllPosts();

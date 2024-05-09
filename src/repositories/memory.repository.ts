@@ -1,6 +1,6 @@
-import User from '../models/user.model';
-import Post from '../models/post.model';
-import Comment from '../models/comment.model';
+import User from '../models/user.model.js';
+import Post from '../models/post.model.js';
+import Comment from '../models/comment.model.js';
 
 let users: User[] = [];
 let posts: Post[] = [];

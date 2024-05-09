@@ -1,5 +1,5 @@
-import * as commentRepository from '../repositories/memory.repository';
-import Comment from '../models/comment.model';
+import * as commentRepository from '../repositories/memory.repository.js';
+import Comment from '../models/comment.model.js';
 
 export const getAllComments = (): Comment[] => {
   return commentRepository.getComments();

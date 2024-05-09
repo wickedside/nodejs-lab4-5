@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as UserService from '../services/user.service';
+import * as UserService from '../services/user.service.js';
 
 export const getAllUsers = async (_req: Request, res: Response): Promise<void> => {
   const users = UserService.getAllUsers();

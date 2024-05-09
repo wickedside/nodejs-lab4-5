@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as CommentService from '../services/comment.service';
+import * as CommentService from '../services/comment.service.js';
 
 export const getAllComments = async (_req: Request, res: Response): Promise<void> => {
   const comments = CommentService.getAllComments();

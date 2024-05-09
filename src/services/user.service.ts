@@ -1,5 +1,5 @@
-import * as userRepository from '../repositories/memory.repository';
-import User from '../models/user.model';
+import * as userRepository from '../repositories/memory.repository.js';
+import User from '../models/user.model.js';
 
 export const getAllUsers = (): User[] => {
   return userRepository.getUsers();
