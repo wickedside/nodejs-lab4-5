@@ -1,7 +1,7 @@
 import express from 'express';
-import userRouter from './routes/user.routes.js';
-import postRouter from './routes/post.routes.js';
-import commentRouter from './routes/comment.routes.js';
+import userRouter from './routes/user.routes';
+import postRouter from './routes/post.routes';
+import commentRouter from './routes/comment.routes';
 
 const app = express();
 

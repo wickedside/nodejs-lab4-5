@@ -1,17 +1,11 @@
-import * as postRepository from '../repositories/memory.repository.js';
-import Post from '../models/post.model.js';
+import * as postRepository from '../repositories/memory.repository';
+import Post from '../models/post.model';
 
-export const getAllPosts = (): Post[] => {
-  return postRepository.getPosts();
-};
+export const getAllPosts = (): Post[] => postRepository.getPosts();
 
-export const getPostById = (id: string): Post | undefined => {
-  return postRepository.findPostById(id);
-};
+export const getPostById = (id: string): Post | undefined => postRepository.findPostById(id);
 
-export const createPost = (postData: Post): Post => {
-  return postRepository.addPost(postData);
-};
+export const createPost = (postData: Post): Post => postRepository.addPost(postData);
 
 export const updatePost = (id: string, updateData: Partial<Post>): Post | null => {
   const post = postRepository.findPostById(id);

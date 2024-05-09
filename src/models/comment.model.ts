@@ -10,9 +10,13 @@ interface IComment {
 
 class Comment {
   public id: string;
+
   public text: string;
+
   public userId: string;
+
   public postId: string;
+
   public createdAt: number;
 
   constructor({ id = uuidv4(), text, userId, postId, createdAt = Date.now() }: IComment) {

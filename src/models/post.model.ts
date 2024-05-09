@@ -10,9 +10,13 @@ interface IPost {
 
 class Post {
   public id: string;
+
   public title: string;
+
   public content: string;
+
   public userId: string;
+
   public createdAt: number;
 
   constructor({ id = uuidv4(), title, content, userId, createdAt = Date.now() }: IPost) {

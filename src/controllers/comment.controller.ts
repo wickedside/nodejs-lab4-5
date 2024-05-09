@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as CommentService from '../services/comment.service.js';
+import * as CommentService from '../services/comment.service';
 
 export const getAllComments = async (_req: Request, res: Response): Promise<void> => {
   const comments = CommentService.getAllComments();
@@ -7,7 +7,7 @@ export const getAllComments = async (_req: Request, res: Response): Promise<void
 };
 
 export const getCommentById = async (req: Request, res: Response): Promise<void> => {
-  const id = req.params['id'];
+  const {id} = req.params;
   if (!id) {
     res.status(400).send('Comment ID is required');
     return;
@@ -26,7 +26,7 @@ export const createComment = async (req: Request, res: Response): Promise<void> 
 };
 
 export const updateComment = async (req: Request, res: Response): Promise<void> => {
-  const id = req.params['id'];
+  const {id} = req.params;
   if (!id) {
     res.status(400).send('Comment ID is required for update');
     return;
@@ -40,7 +40,7 @@ export const updateComment = async (req: Request, res: Response): Promise<void> 
 };
 
 export const deleteComment = async (req: Request, res: Response): Promise<void> => {
-  const id = req.params['id'];
+  const {id} = req.params;
   if (!id) {
     res.status(400).send('Comment ID is required for deletion');
     return;

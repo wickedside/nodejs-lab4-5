@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as UserService from '../services/user.service.js';
+import * as UserService from '../services/user.service';
 
 export const getAllUsers = async (_req: Request, res: Response): Promise<void> => {
   const users = UserService.getAllUsers();
@@ -7,7 +7,7 @@ export const getAllUsers = async (_req: Request, res: Response): Promise<void> =
 };
 
 export const getUserById = async (req: Request, res: Response): Promise<void> => {
-  const id = req.params['id'];
+  const {id} = req.params;
   if (!id) {
     res.status(400).send('User ID is required');
     return;
@@ -26,7 +26,7 @@ export const createUser = async (req: Request, res: Response): Promise<void> => 
 };
 
 export const updateUser = async (req: Request, res: Response): Promise<void> => {
-  const id = req.params['id'];
+  const {id} = req.params;
   if (!id) {
     res.status(400).send('User ID is required for update');
     return;
@@ -40,7 +40,7 @@ export const updateUser = async (req: Request, res: Response): Promise<void> => 
 };
 
 export const deleteUser = async (req: Request, res: Response): Promise<void> => {
-  const id = req.params['id'];
+  const {id} = req.params;
   if (!id) {
     res.status(400).send('User ID is required for deletion');
     return;

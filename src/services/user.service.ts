@@ -1,17 +1,11 @@
-import * as userRepository from '../repositories/memory.repository.js';
-import User from '../models/user.model.js';
+import * as userRepository from '../repositories/memory.repository';
+import User from '../models/user.model';
 
-export const getAllUsers = (): User[] => {
-  return userRepository.getUsers();
-};
+export const getAllUsers = (): User[] => userRepository.getUsers();
 
-export const getUserById = (id: string): User | undefined => {
-  return userRepository.findUserById(id);
-};
+export const getUserById = (id: string): User | undefined => userRepository.findUserById(id);
 
-export const createUser = (userData: User): User => {
-  return userRepository.addUser(userData);
-};
+export const createUser = (userData: User): User => userRepository.addUser(userData);
 
 export const updateUser = (id: string, updateData: Partial<User>): User | null => {
   const user = userRepository.findUserById(id);
