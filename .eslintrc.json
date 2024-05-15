@@ -23,7 +23,8 @@
       {
         "devDependencies": [
           "**/*.test.ts",
-          "**/test/**"
+          "**/test/**",
+          "**/*.spec.ts"
         ]
       }
     ]
