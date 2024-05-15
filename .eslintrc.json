@@ -17,7 +17,16 @@
         "ts": "never"
       }
     ],
-    "import/no-unresolved": "error"
+    "import/no-unresolved": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts",
+          "**/test/**"
+        ]
+      }
+    ]
   },
   "settings": {
     "import/resolver": {
@@ -30,5 +39,9 @@
         ]
       }
     }
+  },
+  "env": {
+    "jest": true,
+    "node": true
   }
 }
